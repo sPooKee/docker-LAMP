@@ -25,6 +25,11 @@ EXPOSE 80
 # for MySQL server (mariadb, only if START_MYSQL = true)
 EXPOSE 3306
 
+ADD sites/php56.conf /etc/nginx/sites-enabled/php56.conf
+ADD sites/php70.conf /etc/nginx/sites-enabled/php70.conf
+ADD sites/php71.conf /etc/nginx/sites-enabled/php71.conf
+ADD info.php /var/www/shop/info.php
+
 # start servers
 ADD startServers.sh /usr/sbin/start-servers
 ADD setupMysqlUser.sh /usr/sbin/setup-mysql-user
