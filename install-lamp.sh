@@ -49,6 +49,6 @@ apt-get autoclean
 
 echo "127.0.0.1    php56.dev php70.dev php71.dev" >> /etc/hosts
 mkdir /var/www/shop
-chmod www-data:www-data /var/www/shop
+chown www-data:www-data /var/www/shop
 # reduce docker layer size
 #cleanup-image
